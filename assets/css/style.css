@@ -1,0 +1,336 @@
+/* ===================================================
+   Reset Margin & Padding while giving Box Sizing
+=================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   Variables of Color, Text Size, Font Weight, 
+   Line Height, etc.
+=================================================== */
+
+:root {
+    /* Colors */
+    --color_light_black: #101A24;
+    --color_light_orange: #EA6D27;
+    --text_color_grey: #5C6574;
+    --color_white: #fff;
+    --color_light_grey: #F3F4F4;
+
+    /* Font Family */
+    --font_primary: 'David Libre', serif;
+    --font_secondary: 'Inter', sans-serif;
+
+    /* Font Sizes */
+    --text_size_70: 4.375rem;
+    --text_size_60: 3.75rem;
+    --text_size_50: 3.125rem;
+    --text_size_20: 1.25rem;
+    --text_size_16: 1rem;
+    --text_size_15: 0.938rem;
+    --text_size_12: 0.75rem;
+
+    /* Font Weights */
+    --regular_font_weight: 400;
+    --medium_font_weight: 500;
+    --bold_font_weight: 700;
+
+    /* Line Heights */
+    --line_height_72: 4.5rem;
+    --line_height_65: 4.063rem;
+    --line_height_58: 3.625rem;
+    --line_height_40: 2.5rem;
+    --line_height_26: 1.625rem;
+    --line_height_29: 1.813rem;
+    --line_height_21: 1.313rem;
+
+    /* Spacing Variables */
+    --spacing_4: 0.25rem;
+    --spacing_8: 0.5rem;
+    --spacing_12: 0.75rem;
+    --spacing_16: 1rem;
+    --spacing_24: 1.5rem;
+    --spacing_32: 2rem;
+    --spacing_48: 3rem;
+
+    /* Box Shadows */
+    --box_shadow_light: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    /* Transition Speed */
+    --transition_fast: 0.2s ease-in-out;
+    --transition_medium: 0.3s ease-in-out;
+    --transition_slow: 0.5s ease-in-out;
+}
+
+/* ===================================================
+   Global Styles
+=================================================== */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font_secondary);
+    color: var(--text_color_grey);
+    background-color: var(--color_white);
+}
+
+/* Mobile Font Adjustment */
+@media (max-width: 767px) {
+    html {
+        font-size: 62.5%; /* Scales to 10px for better readability */
+    }
+}
+
+/* ===================================================
+   Backgrounds
+=================================================== */
+
+.background-light-grey {
+    background: var(--color_light_grey);
+}
+
+.background-light-black {
+    background: var(--color_light_black);
+}
+
+.background-light-orange {
+    background: var(--color_light_orange);
+}
+
+/* ===================================================
+   Typography
+=================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font_primary);
+    color: var(--color_light_black);
+    font-weight: var(--bold_font_weight);
+}
+
+/* Text Sizes */
+.text-size-70 {
+    font-size: var(--text_size_70);
+}
+
+.text-size-60 {
+    font-size: var(--text_size_60);
+}
+
+.text-size-50 {
+    font-size: var(--text_size_50);
+}
+
+.text-size-20 {
+    font-size: var(--text_size_20);
+}
+
+.text-size-16 {
+    font-size: var(--text_size_16);
+}
+
+.text-size-12 {
+    font-size: var(--text_size_12);
+}
+
+/* Line Heights */
+.line-height-72 {
+    line-height: var(--line_height_72);
+}
+
+.line-height-65 {
+    line-height: var(--line_height_65);
+}
+
+.line-height-40 {
+    line-height: var(--line_height_40);
+}
+
+/* Unstyled List */
+.list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+/* ===================================================
+   Container
+=================================================== */
+
+.container-default {
+    max-width: 1160px;
+    margin-inline: auto;
+    padding-inline: var(--spacing_16);
+}
+
+@media (max-width: 1200px) {
+    .container-default {
+        max-width: 940px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container-default {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container-default {
+        max-width: 550px;
+    }
+}
+
+@media (max-width: 575px) {
+    .container-default {
+        max-width: 100%;
+        padding-inline: var(--spacing_16);
+    }
+}
+
+/* ===================================================
+   Buttons & Links
+=================================================== */
+
+.link-default {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition_medium);
+}
+
+.link-default:hover {
+    text-decoration: underline;
+}
+
+/* Default Button */
+.button-primary {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--color_light_orange);
+    color: var(--color_white);
+    text-align: center;
+    border-radius: 1rem 0.25rem;
+    transition: var(--transition_medium);
+}
+
+/* Button Hover Effect */
+.button-primary:hover {
+    background-color: #c75a1d;
+    transform: scale(1.05);
+}
+
+/* Dark Button */
+.button-dark {
+    background-color: var(--color_light_black);
+    color: var(--color_white);
+}
+
+.button-dark:hover {
+    background-color: #0e1620;
+}
+
+/* ===================================================
+   Utility Classes
+=================================================== */
+
+/* Flex Utilities */
+.display-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+/* Text Utilities */
+.text-align-center {
+    text-align: center;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+/* Margin Utilities */
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.margin-bottom-4 {
+    margin-bottom: var(--spacing_4);
+}
+
+.margin-bottom-8 {
+    margin-bottom: var(--spacing_8);
+}
+
+.margin-bottom-12 {
+    margin-bottom: var(--spacing_12);
+}
+
+.margin-bottom-16 {
+    margin-bottom: var(--spacing_16);
+}
+
+/* Padding Utilities */
+.padding-16 {
+    padding: var(--spacing_16);
+}
+
+/* ===================================================
+   Images
+=================================================== */
+
+.image-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border_radius_small);
+}
+
+/* Responsive Image Wrapper */
+.image-full-width {
+    width: 100%;
+    height: auto;
+}
+
+/* ===================================================
+   Box Shadows
+=================================================== */
+
+.box-shadow-light {
+    box-shadow: var(--box_shadow_light);
+}
+
+/* ===================================================
+   Border Radius
+=================================================== */
+
+.border-radius-small {
+    border-radius: var(--border_radius_small);
+}
+
+.border-radius-medium {
+    border-radius: var(--border_radius_medium);
+}
+
+.border-radius-large {
+    border-radius: var(--border_radius_large);
+}

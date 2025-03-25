@@ -1,0 +1,5 @@
+/* Fix spacing between nav items */
+.nav ul {
+    gap: var(--spacing_24); /* Use spacing variable */
+
+}
