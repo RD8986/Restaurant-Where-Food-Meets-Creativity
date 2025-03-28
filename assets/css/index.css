@@ -3,3 +3,168 @@
     gap: var(--spacing_24); /* Use spacing variable */
 
 }
+header{
+    margin-top: 64px;
+}
+
+/* Footer Section */
+.footer-top {
+    position: relative;
+    margin-top: 50px;
+}
+
+/* Dropdown Menu for Mobile View */
+@media (max-width: 991px) {
+    .nav {
+        position: relative;
+    }
+
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--color_white);
+        width: 100%;
+        box-shadow: var(--box_shadow_light);
+        padding: var(--spacing_16);
+    }
+
+    .nav ul li {
+        margin-bottom: var(--spacing_8);
+    }
+
+    .nav ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .nav ul li a {
+        color: var(--color_light_black);
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    input[type="checkbox"]:checked ~ ul {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: var(--text_size_20);
+        cursor: pointer;
+        color: var(--color_light_black);
+        z-index: 10; /* Ensure toggle button is above dropdown */
+    }
+
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        z-index: 11; /* Ensure toggle label is above dropdown and toggle button */
+        background-color: var(--color_white); /* Add background for better visibility */
+        padding: 8px; /* Add padding for better click area */
+        border-radius: 4px; /* Optional: Add rounded corners */
+    }
+}
+
+/* Footer Section */
+.footer-top .overlay h2{color: var(--color_white); line-height: var(--line_height_58); font-size: var(--text_size_50);}
+.footer-top .background-image-container {
+    position: relative;
+    overflow: hidden;
+}
+.footer-top .background-image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.footer-top .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer-top .footer-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-top .overlay .subscriber-form input{
+    flex: 1;
+    padding: 20px 20px;
+    outline: none;
+    border: none;
+    font-size: var(--text_size_18);
+}
+
+.footer-bottom .text-footer{font-family: var(--font_secondary); font-size: var(--text_size_16); line-height: var(--line_height_29);}
+
+.footer-column a {
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+
+    padding: var(--spacing_32) 0;
+    color: var(--text_color_grey);
+}
+
+.footer-columns {
+    gap: var(--spacing_32);
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    width: 100%;
+    max-width: 220px;
+}
+
+.footer-column h3 {
+    color: var(--color_light_black);
+    font-family: var(--font_secondary);
+}
+
+.footer-column ul li {
+    margin-bottom: var(--spacing_8);
+}
+
+.footer-column ul li a {
+    color: var(--text_color_grey);
+    transition: var(--transition_medium);
+}
+
+.footer-column ul li a:hover {
+    color: var(--color_light_orange);
+}
+
+.footer-copyright {
+
+    padding: var(--spacing_16) 0;
+    color: var(--text_color_grey);
+    border-top: 1px solid var(--color_light_grey);
+}
+
+.flex-unwrap{
+    flex-wrap: nowrap;
+}
